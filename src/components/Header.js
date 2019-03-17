@@ -102,13 +102,13 @@ const Header = props => {
           {size => (
             <Box
               flex
-              align="start"
-              justify="center"
+              align="center"
               direction="row"
               pad="none"
+              height="80px"
             >
               <Box flex="grow">
-                <Heading level="2">Mailton</Heading>
+                <Heading level="2" margin="none">Mailton</Heading>
               </Box>
               {size === 'small' && (
                 <Box height="100%" justify="center">
