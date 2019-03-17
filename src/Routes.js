@@ -34,7 +34,7 @@ class Routes extends React.Component {
       <Router history={history}>
         <Box fill flex direction="column">
           {/* header */}
-          <Box flex={{ grow: false, shrink: false }}>
+          <Box flex={{ grow: 0, shrink: 0 }}>
             <Header />
           </Box>
           {/* contents */}

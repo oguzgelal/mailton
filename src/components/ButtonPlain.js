@@ -47,7 +47,7 @@ const ButtonPlain = ({ children, icon, ...rest }) => {
           >
             {!isNil(icon) && (
               <Box
-                flex={{ shrink: false }}
+                flex={{ shrink: 0 }}
                 justify="center"
               >
                 {icon}
