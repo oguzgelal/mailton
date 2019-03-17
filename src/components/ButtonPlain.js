@@ -34,7 +34,7 @@ const ButtonPlain = ({ children, icon, ...rest }) => {
       iconOnly={iconOnly}
       isFocused={isFocused}
       isHovered={isHovered}
-      hoverIndicator={themeSwitch(rest, 'light-1', 'dark-1')}
+      hoverIndicator={themeSwitch(rest, 'light-2', 'dark-1')}
     >
       {({ hover, focus }) => {
         setHover(hover);

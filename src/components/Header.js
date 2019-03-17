@@ -14,10 +14,13 @@ import IconMoon from 'react-feather/dist/icons/moon';
 import ResponsiveWrapper from './ResponsiveWrapper';
 import ButtonPlain from './ButtonPlain';
 
+import { ROUTE_EMAILS, ROUTE_RULES, ROUTE_ACCOUNT } from '../Routes';
+
 import * as settingsActions from '../redux/settings';
 import themeSwitch from '../utils/themeSwitch';
 import getColor from '../utils/getColor';
 import getSize from '../utils/getSize';
+import navigate from '../utils/navigate';
 
 const SlideoutLayer = styled(Layer)`
   position: fixed;
@@ -43,14 +46,26 @@ const Header = props => {
     {
       id: 'emails',
       label: 'Emails',
+      onClick: () => {
+        navigate(ROUTE_EMAILS);
+        setSidebarOpen(false);
+      },
     },
     {
       id: 'rules',
       label: 'Rules',
+      onClick: () => {
+        navigate(ROUTE_RULES);
+        setSidebarOpen(false);
+      },
     },
     {
       id: 'account',
       label: 'Account',
+      onClick: () => {
+        navigate(ROUTE_ACCOUNT);
+        setSidebarOpen(false);
+      },
     },
     {
       id: 'theme',
@@ -113,7 +128,7 @@ const Header = props => {
               align="center"
               direction="row"
               pad="none"
-              height="80px"
+              height="100px"
             >
               <Box flex="grow">
                 <Heading level="2" margin="none">Mailton</Heading>

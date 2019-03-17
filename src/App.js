@@ -11,7 +11,7 @@ import GlobalStyle from './styles/global';
 import getTheme from './instances/getTheme';
 import persistor from './instances/persistor';
 
-import Header from './components/Header';
+import Routes from './Routes';
 
 class App extends Component {
   constructor(props, context) {
@@ -41,9 +41,7 @@ class App extends Component {
           <Grommet full theme={this.state.theme}>
             <>
               <GlobalStyle />
-              <Box fill>
-                <Header />
-              </Box>
+              <Routes />
             </>
           </Grommet>
         </ThemeProvider>
