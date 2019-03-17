@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components/macro';
-import { Box, Heading, Text, ResponsiveContext } from 'grommet';
+import { Box, ResponsiveContext } from 'grommet';
 
 const ResponsiveWrapper = props => (
   <ResponsiveContext.Consumer>
