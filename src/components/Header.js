@@ -28,7 +28,9 @@ const SlideoutLayer = styled(Layer)`
   z-index: 9;
 `;
 
-const SlideoutButton = styled(Button)`
+const SlideoutButton = styled(Button).attrs({
+  reverse: true
+})`
   padding: ${p => getSize(p, 'small')} !important;
   border-bottom: 1px solid ${p => getColor(p, `${p.activeTheme}-1`)};
   & > div { justify-content: flex-start; }
@@ -84,11 +86,17 @@ const Header = props => {
                   <SlideoutButton
                     fill
                     plain
-                    label={item.label || item.slideoutLabel}
                     icon={item.icon || item.slideoutIcon}
                     onClick={item.onClick}
                     hoverIndicator={themeSwitch(props, 'light-1', 'dark-1')}
                     activeTheme={themeSwitch(props, 'light', 'dark')}
+                    label={(
+                      <Box flex="grow">
+                        <Text>
+                          {item.label || item.slideoutLabel}
+                        </Text>
+                      </Box>
+                    )}
                   />
                 </Box>
               )
