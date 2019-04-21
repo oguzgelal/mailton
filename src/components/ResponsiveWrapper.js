@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components/macro';
 import { Box, ResponsiveContext } from 'grommet';
 
-const ResponsiveWrapper = props => (
+const ResponsiveWrapper = ({ children, ...rest }) => (
   <ResponsiveContext.Consumer>
     {size => {
       let width = '60%';
@@ -22,11 +22,15 @@ const ResponsiveWrapper = props => (
 
       return (
         <Box
+          {...rest}
           alignSelf="center"
           width={width}
-          pad={{ horizontal: padding, vertical: 'none' }}
+          pad={{
+            horizontal: padding,
+            vertical: 'none',
+          }}
         >
-          {props.children}
+          {children}
         </Box>
       )
     }}
